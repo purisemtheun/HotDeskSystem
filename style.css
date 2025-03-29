@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url('./Kanit/Kanit-Regular.ttf'); /* ✅ โหลดฟอนต์ Kanit */
+}
+
+/* ✅ พื้นหลังของ body สีขาวและตัวอักษรสีดำ */
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ กำหนด container พื้นหลังสีน้ำตาล */
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: brown;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ หัวข้อ */
+.header {
+    font-size: 30px;
+    text-align: center;
+    color: white; /* สีข้อความใน header */
+    margin-bottom: 20px;
+}
+
+/* ✅ สำหรับจัดรูปแบบ flex */
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ✅ ระยะห่างของ input */
+.form-input {
+    margin-bottom: 15px;
+}
+
+/* ✅ หัวข้อฟอร์ม */
+.header-form {
+    width: 140px;
+    font-weight: bold;
+    color: white;
+}
+
+/* ✅ สไตล์ input, textarea และ select */
+input.form,
+textarea,
+select {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* ✅ สำหรับ textarea */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ✅ ปุ่มส่งข้อมูลและรีเซ็ต */
+.center {
+    text-align: center;
+}
+
+/* ✅ ปุ่มส่งข้อมูล */
+.button {
+    border: 1px solid rgb(0, 0, 0);
+    width: 45%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #266bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ✅ ปุ่มรีเซ็ต */
+.buttonreset {
+    border: 1px solid rgb(0, 0, 0);
+    width: 45%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #ff3838;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ✅ สไตล์ข้อความแจ้งเตือน */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    display: none;
+    border-radius: 5px;
+}
+
+
+.message.success {
+    background-color: #00ff51;
+    color: white;
+    display: block;
+}
+
+.message.danger {
+    background-color: #ff0000;
+    color: white;
+    display: block;
+}
+
+
+.back-ground {
+    background-color: #f8e6cb;
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    .button,
+    .buttonreset {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

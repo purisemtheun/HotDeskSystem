@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Desk Booking Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-yellow-800 min-h-screen flex items-center justify-center">
+
+    <!-- 📚 Container หลัก -->
+    <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 mt-6 p-6 bg-white shadow-lg rounded-lg">
+
+        <!-- 🔙 ปุ่มกลับไปหน้าจองโต๊ะ -->
+        <a href="index.html"
+            class="text-blue-500 hover:text-blue-700 underline inline-block mb-4 transition-all">🔙 กลับไปหน้าจองโต๊ะ</a>
+
+        <!-- 📝 หัวข้อหลัก -->
+        <h1 class="text-2xl font-bold text-center text-gray-800 my-4">
+            หน้าจัดการการจองที่นั่งทำงาน (Hot Desk Management)
+        </h1>
+
+        <!-- 📊 รายการการจอง -->
+        <div id="bookings" class="space-y-4 text-gray-700"></div>
+    </div>
+
+    <!-- ✅ โหลด axios ก่อน hotdesk.js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="hotdesk.js"></script>
+
+</body>
+
+</html>

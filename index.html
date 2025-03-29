@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Desk Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="back-ground">
+    <a href="hotdesk.html">Go to Hotdesk Management</a>
+    <div class="container">
+        <div class="header">ระบบจองที่นั่งทำงาน (Hot Desk Booking System)</div>
+
+        <form id="booking-form" onsubmit="submitData(); return false;">
+            <!-- ชื่อผู้จอง -->
+            <div class="flex form-input">
+                <div class="header-form">ชื่อผู้จอง</div>
+                <input id="username" class="form" name="username" type="text" placeholder="กรอกชื่อของคุณ" maxlength="50" required>
+            </div>
+
+            <!-- อายุ -->
+            <div class="flex form-input">
+                <div class="header-form">อายุ</div>
+                <input id="age" class="form" name="age" type="number" min="1" max="100" placeholder="กรอกอายุของคุณ" required>
+            </div>
+
+            <!-- เพศ -->
+            <div class="flex gender form-input">
+                <div class="header-form">เพศ</div>
+                <div class="flex">
+                    <div>
+                        <input name="gender" type="radio" value="ชาย" required> ชาย
+                    </div>
+                    <div>
+                        <input name="gender" type="radio" value="หญิง" required> หญิง
+                    </div>
+                    <div>
+                        <input name="gender" type="radio" value="อื่นๆ" required> อื่นๆ
+                    </div>
+                </div>
+            </div>
+
+            <!-- วันที่จอง -->
+            <div class="flex form-input">
+                <div class="header-form">วันที่จอง</div>
+                <input id="bookingDate" class="form" name="bookingDate" type="date" required>
+            </div>
+
+            <!-- เวลาเริ่มต้น -->
+            <div class="flex form-input">
+                <div class="header-form">เวลาเริ่มต้น</div>
+                <input id="startTime" class="form" name="startTime" type="time" required>
+            </div>
+
+            <!-- เวลาสิ้นสุด -->
+            <div class="flex form-input">
+                <div class="header-form">เวลาสิ้นสุด</div>
+                <input id="endTime" class="form" name="endTime" type="time" required>
+            </div>
+
+            <!-- หมายเลขโต๊ะ -->
+            <div class="flex form-input">
+                <div class="header-form">เลือกหมายเลขโต๊ะ</div>
+                <select id="deskNumber" class="form" name="deskNumber" required>
+                    <option value="">เลือกโต๊ะ...</option>
+                    <option value="1">โต๊ะ 1</option>
+                    <option value="2">โต๊ะ 2</option>
+                    <option value="3">โต๊ะ 3</option>
+                    <option value="4">โต๊ะ 4</option>
+                    <option value="5">โต๊ะ 5</option>
+                    <option value="6">โต๊ะ 6</option>
+                    <option value="7">โต๊ะ 7</option>
+                    <option value="8">โต๊ะ 8</option>
+                    <option value="9">โต๊ะ 9</option>
+                    <option value="10">โต๊ะ 10</option>
+                </select>
+            </div>
+
+            <!-- คำอธิบายเพิ่มเติม -->
+            <div class="form-input">
+                <div class="header-form">คำอธิบายเพิ่มเติม</div>
+                <textarea id="description" class="form" name="description" placeholder="กรอกข้อมูลเพิ่มเติม (ถ้ามี)" required></textarea>
+            </div>
+
+            <!-- แสดงข้อความแจ้งเตือน -->
+            <div id="message" class="message"></div>
+
+            <!-- ปุ่มส่งข้อมูล -->
+            <div class="center">
+                <button class="button" type="submit">จองที่นั่ง</button>
+                <button class="buttonreset" type="reset">ล้างข้อมูล</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ✅ โหลด axios ก่อนโหลด index.js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
